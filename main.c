@@ -23,11 +23,18 @@ int main(void)
 		printf("%c",dst[i]);*/
 	/*ft_memmove(dst,src,10);
 	printf("%s , %s", dst, src);*/
-	char dst[9] = "hello";
-	char src[] = "world";
-	size_t result;
+	//char dst[9] = "hello";
+	//char src[] = "world";
+	/*size_t result;
 	result = ft_strlcat(dst, src, sizeof(dst));
-	printf("%s , result:%lu", dst, result);
+	printf("%s , result:%lu", dst, result);*/
+	/*char *str = strchr(dst, 'l');
+	printf("%s , %p",str, str);*/
+	char s1[] = "test\200";
+	char s2[] = "test\0";
+	int n = 6;
+	printf("bushin:%d\n", ft_strncmp(s1, s2, n));
+	printf("original:%d\n", strncmp(s1, s2, n));
 
 
 

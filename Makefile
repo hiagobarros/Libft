@@ -16,7 +16,11 @@ SRCS= ft_isalpha.c\
       ft_strlcpy.c\
       ft_strlcat.c\
       ft_toupper.c\
-      ft_tolower.c
+      ft_tolower.c\
+	  ft_strchr.c\
+	  ft_strrchr.c\
+	  ft_strncmp.c
+
 OBJS=$(SRCS:.c=.o)
 
 
@@ -35,3 +39,12 @@ fclean: clean
 	$(RM) $(NAME)
 
 re: fclean all
+
+
+
+linker: $(NAME)
+	$(CC) $(CFLAGS) $(NAME) main.c
+
+run: linker
+	./a.out
+  
