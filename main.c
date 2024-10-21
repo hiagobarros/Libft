@@ -30,13 +30,16 @@ int main(void)
 	printf("%s , result:%lu", dst, result);*/
 	/*char *str = strchr(dst, 'l');
 	printf("%s , %p",str, str);*/
-	char s1[] = "test\200";
-	//char s2[] = "test\0";
-	int n = 3;
+	char s1[] = "testc\200";
+	char s2[] = "testa\0";
+	int n = 10;
 	/*printf("bushin:%d\n", ft_strncmp(s1, s2, n));
 	printf("original:%d\n", strncmp(s1, s2, n));*/
-	printf("bushinnn:%p\n", ft_memchr(s1, 'e', n));
-	printf("original:%p\n", memchr(s1, 'e', n));
+	/*printf("bushinnn:%p\n", ft_memchr(s1, 'e', n));
+	printf("original:%p\n", memchr(s1, 'e', n));*/
+	printf("bushinnn:%d\n", ft_memcmp(s1, s2, n));
+	printf("original:%d\n", memcmp(s1, s2, n));
+
 
 
 
